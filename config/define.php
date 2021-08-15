@@ -38,9 +38,9 @@
    
    //PHPMailer
    define('EMAILASSUNTO','xxxxxxxxxxxxxx');//ASSUNTO DO EMAIL
-   define('EMAILREMETENTE','matheus_curvelo@hotmail.com');//EMAIL DO REMETENTE
-   define('EMAILREMETENTENOME','Matheus Curvelo');//NOME DO REMETENTE
-   define('EMAILHOSTSMTP','smtp.outlook.com');//HOST SMTP
+   define('EMAILREMETENTE','');//EMAIL DO REMETENTE
+   define('EMAILREMETENTENOME','');//NOME DO REMETENTE
+   define('EMAILHOSTSMTP','');//HOST SMTP
    define('EMAILPORTASMTP',587);//PORTA SMTP
    define('EMAILUSUARIO','xxxxxxxxxxxxr');//USUÁRIO SMTP
    define('EMAILSENHA','xxxxx');//SENHA SMTP
