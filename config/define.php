@@ -4,14 +4,6 @@
    //$getError = [];
    //$getSuccess = [];
 
-   /* $arr = [
-    'host' => $cript->encrypt('localhost'),
-    'dbname' => $cript->encrypt('db_teste'),
-    'charset' => $cript->encrypt('utf8'),
-    'user' => $cript->encrypt('root'),
-    'password' => $cript->encrypt('root'),
-   ]; */
-
    define('KEY', 'mmcs');
    define('KEY_IV', 'mmcs_iv');
 

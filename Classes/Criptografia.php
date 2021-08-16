@@ -1,5 +1,5 @@
 ﻿<?php
-
+require_once "config/define.php";
 /**
  * Simple Encryption / Decryption Class.
  * Uses PHP's OpenSSL Encrypt / Decrypt
@@ -11,8 +11,8 @@
 Class Criptografia{
     const INPUT_ENC_METHOD = "AES-256-CBC";
     const KEY_ENC_METHOD = "SHA256";
-    const KEY = "mmcs";
-    const KEY_IV = "mmcs_iv";
+    const KEY = KEY;
+    const KEY_IV = KEY_IV;
 
     private $app_key;
     private $iv;
