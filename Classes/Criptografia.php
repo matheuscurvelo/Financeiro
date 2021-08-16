@@ -1,5 +1,5 @@
 ﻿<?php
-require_once "config/define.php";
+require_once "../config/define.php";
 /**
  * Simple Encryption / Decryption Class.
  * Uses PHP's OpenSSL Encrypt / Decrypt
