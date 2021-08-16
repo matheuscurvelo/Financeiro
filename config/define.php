@@ -4,6 +4,8 @@
    //$getError = [];
    //$getSuccess = [];
 
+   define('DIR_ROOT',$_SERVER['DOCUMENT_ROOT'].'/PROGRAMAS/Financeiro');
+
    define('KEY', 'mmcs');
    define('KEY_IV', 'mmcs_iv');
 
@@ -15,12 +17,12 @@
 
    //SQL   
    define('SQLDRIVER', 'mysql'); //DRIVER DB
-   define('SQLSERVIDOR', 'cng5VTJDZVdCSTd4ZWQ0NTNwWlozQT09');//SERVIDOR
+   define('SQLSERVIDOR', 'ZVMrcEQvQW4rTkpnbnRjcmV0Q2RTdz09');//SERVIDOR
    define('SQLINSTANCIA','SQLEXPRESS');//INSTANCIA
    define('SQLPORTA','3306');//PORTA
-   define('SQLDB','NEcvYUVKRTJMb1pvSUpHZ3FNcHArUT09');//BANCO DE DADOS
+   define('SQLDB','Q0Rib3dqZ2tWYnh1VE9GRm5TcllIQT09');//BANCO DE DADOS
    define('SQLUSER','djZkOXloUkVSTitpRk5zVkxKV1NEQT09');//USUARIO
-   define('SQLPWD','djZkOXloUkVSTitpRk5zVkxKV1NEQT09');//SENHA
+   define('SQLPWD','bnFzbFV3YUNpdWdRSjVNbklvNUN5UT09');//SENHA
 
    //info login
    define('TBLLOGIN','tb_users');//tabela de login

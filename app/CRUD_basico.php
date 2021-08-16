@@ -13,7 +13,8 @@
  * @return bool quando PUT/PATCH/DELETE 
  */
 
-require_once "../Classes/Crud.php";
+require_once '../config/define.php';
+require_once DIR_ROOT."/Classes/Crud.php";
 
 header('Content-Type: application/json; charset=utf-8');
 

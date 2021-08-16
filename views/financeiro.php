@@ -1,5 +1,6 @@
 <?php
-require_once "../Classes/User.php";
+require_once "../config/define.php";
+require_once DIR_ROOT."/Classes/User.php";
 User::verifyLogin();
 
 //CRUD básico
@@ -30,10 +31,10 @@ $js = '<script src="../assets/js/'.$tabela.'.js"></script>';
 mais ações as suas telas. Após isso, insira mais variáveis no 3º passo
 */
 
-require_once "componentes/header_lateral.php";
+require_once DIR_ROOT."/views/componentes/header_lateral.php";
 
-require_once "componentes/acoes_tabela.php";
-require_once "componentes/acoes_registros.php";
+require_once DIR_ROOT."/views/componentes/acoes_tabela.php";
+require_once DIR_ROOT."/views/componentes/acoes_registros.php";
 
 
 /*

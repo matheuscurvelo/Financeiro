@@ -94,7 +94,7 @@
               </a>
               <ul class="nav nav-treeview mb-3">
                 <li class="nav-item">
-                  <a href="./index.html" class="nav-link bg-danger">
+                  <a href="../app/login.php" class="nav-link bg-danger">
                     <i class="fas fa-power-off nav-icon"></i>
                     <p>Logout</p>
                   </a>
@@ -102,7 +102,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="financeiro.php" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Financeiro
@@ -110,7 +110,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="banco.php" class="nav-link">
                 <i class="nav-icon fas fa-th"></i>
                 <p>
                   Banco

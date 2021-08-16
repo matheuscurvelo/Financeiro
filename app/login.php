@@ -1,8 +1,8 @@
 <?php
 
 require_once "../config/define.php";
-require_once "../Classes/Crud.php";
-require_once "../Classes/User.php";
+require_once DIR_ROOT."/Classes/Crud.php";
+require_once DIR_ROOT."/Classes/User.php";
 
 switch ($_SERVER["REQUEST_METHOD"]) {
     case 'GET':
