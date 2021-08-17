@@ -1,0 +1,143 @@
+body, h1, h2, h3, h4, h5, h6{
+    font-family: 'Source Sans Pro';
+}
+
+.form-white{
+    
+    background-color: white;
+    padding-top: 10px;
+}
+
+.hide-jsgrid
+{
+   display:none;
+}
+
+.form-separator{
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+input.form-side {
+    /* a cor do fundo dos trÃªs campos */
+    border: none;
+    text-align: right;
+    color: #72afd2;
+    width: 100px;
+    /* uma borda de 1px tracejada e na cor laranja para 
+    o campo */
+} 
+
+input.form-side:hover{
+    border-bottom: 1px solid #ff9900;
+}
+
+input:focus.form-side{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ff9900;
+    color:#3c8dbc;
+}
+
+select[readonly] {
+    pointer-events: none;
+    touch-action: none;
+}
+
+.nav-tabs-custom>.nav-tabs>li.active{
+    border-top-color: #ff9900;
+}
+
+
+/*---------------*/
+
+
+.btn-fretatech{
+    border-radius: 10px;
+}
+
+
+.sidebar-onibus {
+    background-color: #283C4C;
+}
+
+.sidebar-fretatech a, .sidebar-fretatech li{
+    color: white;
+}
+
+.sidebar-menu-fretatech{
+    background-color: #283C4C;
+    color: white;
+}
+
+.footer-fretatech {
+    background-color: #222d32;
+    color: #FFF;
+}
+
+
+.btn-fretatech {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: none;
+    background: linear-gradient(135deg, rgba(250,84,40,1) 0%, rgba(255,122,62,1) 95%)
+}
+
+.btn-fretatech:focus,
+.btn-fretatech.focus {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(250,84,40,1) 0%, rgba(255,122,62,1) 95%);
+    border-color: none;
+}
+
+.btn-fretatech:hover {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+.btn-fretatech:active,
+.btn-fretatech.active,
+.open>.dropdown-toggle.btn-fretatech {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+
+.btn-fretatech:active:hover,
+.btn-fretatech.active:hover,
+.open>.dropdown-toggle.btn-fretatech:hover,
+.btn-fretatech:active:focus,
+.btn-fretatech.active:focus,
+.open>.dropdown-toggle.btn-fretatech:focus,
+.btn-fretatech:active.focus,
+.btn-fretatech.active.focus,
+.open>.dropdown-toggle.btn-fretatech.focus {
+    color: #fff;
+    background: linear-gradient(135deg, rgba(250,84,40,1) 0%, rgba(255,122,62,1) 95%);
+    border-color: #985f0d;
+}
+
+.btn-fretatech:active,
+.btn-fretatech.active,
+.open>.dropdown-toggle.btn-fretatech {
+    background-image: none;
+}
+
+.btn-fretatech.disabled:hover,
+.btn-fretatech[disabled]:hover,
+fieldset[disabled] .btn-fretatech:hover,
+.btn-fretatech.disabled:focus,
+.btn-fretatech[disabled]:focus,
+fieldset[disabled] .btn-fretatech:focus,
+.btn-fretatech.disabled.focus,
+.btn-fretatech[disabled].focus,
+fieldset[disabled] .btn-fretatech.focus {
+    background: linear-gradient(135deg, rgba(250,84,40,1) 0%, rgba(255,122,62,1) 95%);
+    border-color: #eea236;
+}
+
+.btn-fretatech .badge {
+    color: #f0ad4e;
+    background-color: #fff;
+}

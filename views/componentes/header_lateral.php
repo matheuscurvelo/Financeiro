@@ -27,9 +27,10 @@
   <link rel="stylesheet" href="../assets/plugins/jquery-ui/jquery-ui.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../assets/plugins/adminlte/css/adminlte.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed dark-mode">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
   <div class="wrapper">
 
     <!-- Navbar -->
@@ -70,11 +71,10 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-dark-navy sidebar-onibus elevation-4">
       <!-- Brand Logo -->
-      <a href="index3.html" class="brand-link">
-        <img src="../assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <a href="index3.html" class="brand-link bg-dark text-center logo">
+        <img src="../assets/img/logo_color.png" style="width: 150px;">
       </a>
 
       <!-- Sidebar -->

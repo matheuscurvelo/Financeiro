@@ -51,7 +51,7 @@ adicionar os campos necessarios a sua necessidade
 ?>
 
 <!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
+<div class="content-wrapper text-sm">
       <!-- Content Header (Page header) -->
       <div class="content-header">
         <div class="container">
@@ -103,7 +103,9 @@ adicionar os campos necessarios a sua necessidade
               <div class="card">
                 <div class="card-body">
                 
-                  <table id="datatable" class="table-dark table rounded table-bordered table-striped table-hover" style="border-radius: 10px;"></table>
+                  <table id="datatable" class="table rounded table-bordered table-striped table-hover" style="border-radius: 10px;">
+                    <thead class="sidebar-onibus text-light rounded-top"></thead>
+                  </table>
 
                 </div>
               </div>

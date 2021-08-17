@@ -5,7 +5,7 @@
       <!-- /.control-sidebar -->
 
       <!-- Main Footer -->
-      <footer class="main-footer">
+      <footer class="main-footer sidebar-onibus">
         <!-- To the right -->
         <div class="float-right d-none d-sm-inline">
           Anything you want
