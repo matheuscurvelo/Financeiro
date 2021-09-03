@@ -19,7 +19,7 @@
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- DataTables  & Plugins -->
@@ -371,6 +371,92 @@
                 return markup;
             },
         });
+      }
+
+      function select2_full(elemento,query,tags = false) {
+        $(elemento).select2({
+            'ajax': {
+                url: '../app/CRUD_basico.php',
+                type: 'GET',
+                data: function (params) {
+                    //
+                    params.term = params.term == undefined ? '' : params.term;
+
+                    return {
+                        query: query,
+                        params: { ':termo': '%' + params.term + '%' }
+                    }
+
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (obj) {
+                          return obj;
+                        })
+                    };
+                }
+            },
+            'language': {
+                "errorLoading": function () {
+                    return 'Falha ao carregar.';
+                },
+                "inputTooLong": function (args) {
+                    var overChars = args.input.length - args.maximum;
+                    var message = 'Por favor, remova ' + overChars + ' caracteres';
+                    return message;
+                },
+                "inputTooShort": function (args) {
+                    var remainingChars = args.minimum - args.input.length;
+    
+                    var message = 'Por favor, insira ' + remainingChars + ' ou mais caracteres';
+    
+                    return message;
+                },
+                "loadingMore": function () {
+                    return 'Carregando mais informações…';
+                },
+                "maximumSelected": function (args) {
+                    var message = 'Você pode escolher ' + args.maximum + ' elementos';
+                    return message;
+                },
+                "noResults": function () {
+                    return 'Nenhum resultado encontrado';
+                },
+                "searching": function () {
+                    return 'Procurando…';
+                }
+            },
+            // para selects que criam uma nova opção:
+            'tags': tags,
+            'createTag': function (params) {
+                var term = $.trim(params.term);
+                term = term.toUpperCase();
+                if (term === '') {
+                    return null;
+                }
+            
+                return {
+                    id: term,
+                    text: '<i class="fas fa-plus text-success"></i> '+term,
+                }
+            },
+            'escapeMarkup': function (markup) {
+                return markup;
+            },
+        });
+      }
+
+      function select2_search ($el, term) {
+        //$el.select2('open');
+        
+        // Get the search box within the dropdown or the selection
+        // Dropdown = single, Selection = multiple
+        var $search = $el.data('select2').dropdown.$search || $el.data('select2').selection.$search;
+        // This is undocumented and may change in the future
+        
+        $search.val(term);
+        $search.trigger('keyup');
+        //setTimeout(function() { $('.select2-results__option').trigger("mouseup"); }, 250);
       }
     </script>
     <?php echo $js ?? null; ?>

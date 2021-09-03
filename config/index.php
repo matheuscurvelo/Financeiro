@@ -6,10 +6,10 @@ require_once DIR_ROOT."/classes/Criptografia.php";
 $cript = new Criptografia();
 
 $arr = [
-    'host' => $cript->encrypt('x'),
-    'dbname' => $cript->encrypt('x'),
-    'user' => $cript->encrypt('x'),
-    'password' => $cript->encrypt('x'),
+    'host' => $cript->encrypt('localhost'),
+    'dbname' => $cript->encrypt('db_teste'),
+    'user' => $cript->encrypt('root'),
+    'password' => $cript->encrypt('root'),
 ]; 
 
 echo "<pre>";

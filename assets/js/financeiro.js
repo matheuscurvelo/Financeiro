@@ -310,11 +310,13 @@ $(document).ready(function () {
                         var option = $("<option selected></option>").val(data['Marca']).text(data['Marca']);
                         $('#Marca').append(option);
                         */
-                        var option = $("<option selected></option>").val(data['id_banco']).text(data['banco_descricao']);
+                        /* var option = $("<option selected></option>").val(data['id_banco']).text(data['banco_descricao']);
                         $('#id_banco').append(option);
 
                         var option = $("<option selected></option>").val(data['tipo_pagamento']).text(data['tipo_pagamento']);
-                        $('#tipo_pagamento').append(option);
+                        $('#tipo_pagamento').append(option); */
+                        select2_search($('#id_banco'),data['banco_descricao']);
+                        select2_search($('#tipo_pagamento'),data['tipo_pagamento']);
 
                         //Máscaras comuns
                         /*
@@ -457,8 +459,40 @@ $(document).ready(function () {
 
     //Inicialização dos campos SELECT2
         select2('#id_banco_filtro','SELECT * FROM banco WHERE descricao LIKE :termo','id_banco','descricao');
-        select2('#id_banco','SELECT * FROM banco WHERE descricao LIKE :termo','id_banco','descricao');
+        select2_full('#id_banco','SELECT *,id_banco id, descricao text FROM banco WHERE descricao LIKE :termo');
         select2('#tipo_pagamento','SELECT DISTINCT tipo_pagamento FROM financeiro WHERE tipo_pagamento LIKE :termo','tipo_pagamento','tipo_pagamento',true);
+
+        $('#id_banco').on('select2:select', function (e) {
+            var data = e.params.data;
+            console.log(data);
+        });
+        /* $('#id_banco').select2({
+            'ajax': {
+                url: '../app/CRUD_basico.php',
+                type: 'GET',
+                data: function (params) {
+                    //
+                    params.term = params.term == undefined ? '' : params.term;
+
+                    return {
+                        query: 'SELECT *,id_banco id, descricao text FROM banco WHERE descricao LIKE :termo',
+                        params: { ':termo': '%' + params.term + '%' }
+                    }
+
+                },
+                processResults: function (data) {
+                    return {
+                        results: $.map(data.data, function (obj) {
+                          return {
+                              id: obj.id,
+                              text: obj.text,
+                              conta: obj.conta
+                          }
+                        })
+                    };
+                }
+            }
+        }) */
     //
 
     //filtro
