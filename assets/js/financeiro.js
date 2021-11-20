@@ -459,13 +459,16 @@ $(document).ready(function () {
 
     //Inicialização dos campos SELECT2
         select2('#id_banco_filtro','SELECT * FROM banco WHERE descricao LIKE :termo','id_banco','descricao');
-        select2_full('#id_banco','SELECT *,id_banco id, descricao text FROM banco WHERE descricao LIKE :termo');
+        select2_full('#id_banco','SELECT *,id_banco id, descricao text FROM banco WHERE descricao LIKE :termo',false, function(data){return '<h1>'+data.text+'</h1>';});
         select2('#tipo_pagamento','SELECT DISTINCT tipo_pagamento FROM financeiro WHERE tipo_pagamento LIKE :termo','tipo_pagamento','tipo_pagamento',true);
 
-        $('#id_banco').on('select2:select', function (e) {
+        
+        /* $('#id_banco').on('select2:select', function (e) {
             var data = e.params.data;
             console.log(data);
-        });
+        }); */
+        
+
         /* $('#id_banco').select2({
             'ajax': {
                 url: '../app/CRUD_basico.php',
@@ -485,14 +488,26 @@ $(document).ready(function () {
                         results: $.map(data.data, function (obj) {
                           return {
                               id: obj.id,
-                              text: obj.text,
-                              conta: obj.conta
+                              text: '<span class="text-success">'+obj.text+'</span>',
+                              html: obj.text+'<br><sup class="text-muted">'+obj.conta+'</sup>',
                           }
                         })
                     };
                 }
+            },
+            escapeMarkup: function(markup) {
+                return markup;
+            },
+            templateResult: function(data) {
+                //data = data.data;
+                console.log(data);
+                return data.html;
+            },
+            templateSelection: function(data) {
+                //console.log(data);
+                return data.text;
             }
-        }) */
+        }); */
     //
 
     //filtro
@@ -507,6 +522,11 @@ $(document).ready(function () {
     });
 
 });
+
+function template_option(data) {
+    console.log('data');
+    return '<span>'+data.text+'</span>';
+}
 
 function mostrarCrud() {
     $('#area_tabela').toggle();

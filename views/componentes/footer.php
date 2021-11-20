@@ -373,7 +373,7 @@
         });
       }
 
-      function select2_full(elemento,query,tags = false) {
+      function select2_full(elemento,query,tags = false,template = function(data){return data.text;} ) {
         $(elemento).select2({
             'ajax': {
                 url: '../app/CRUD_basico.php',
@@ -443,6 +443,7 @@
             'escapeMarkup': function (markup) {
                 return markup;
             },
+            'templateResult': template
         });
       }
 
